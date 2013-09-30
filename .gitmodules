@@ -1,0 +1,3 @@
+[submodule "External/mach_inject"]
+	path = External/mach_inject
+	url = https://github.com/tommetge/mach_inject

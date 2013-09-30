@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE59840017F9F3CA00896A8C /* HopOn-Injector-Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = BED7940817F74865006979B4 /* HopOn-Injector-Info.plist */; };
+		BE64974317F4788500D157DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE64974117F4788500D157DE /* InfoPlist.strings */; };
+		BE64974717F4788500D157DE /* HopOn.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64974617F4788500D157DE /* HopOn.m */; };
+		BE64974E17F4788500D157DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64974D17F4788500D157DE /* XCTest.framework */; };
+		BE64975217F4788500D157DE /* HopOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64973517F4788500D157DE /* HopOn.framework */; };
+		BE64975817F4788500D157DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE64975617F4788500D157DE /* InfoPlist.strings */; };
+		BE64975A17F4788500D157DE /* HopOnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64975917F4788500D157DE /* HopOnTests.m */; };
+		BE64977C17F480A500D157DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64976B17F47EFB00D157DE /* Foundation.framework */; };
+		BE64977F17F480A500D157DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64977E17F480A500D157DE /* main.m */; };
+		BE6497FB17F4A78000D157DE /* HopOn.h in Headers */ = {isa = PBXBuildFile; fileRef = BE64974517F4788500D157DE /* HopOn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BED793B517F5F691006979B4 /* mach_inject_bundle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BED793B317F5F63F006979B4 /* mach_inject_bundle.framework */; };
+		BED793B617F5F6BD006979B4 /* mach_inject_bundle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED793B317F5F63F006979B4 /* mach_inject_bundle.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BED793F817F5FF96006979B4 /* XPCListenerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BED793F717F5FF96006979B4 /* XPCListenerDelegate.m */; };
+		BED793FB17F722C4006979B4 /* Injector.m in Sources */ = {isa = PBXBuildFile; fileRef = BED793FA17F722C4006979B4 /* Injector.m */; };
+		BED7940117F72EF1006979B4 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7940017F72EF1006979B4 /* ServiceManagement.framework */; };
+		BED7940317F72F39006979B4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED7940217F72F39006979B4 /* Security.framework */; };
+		BED7940417F72F51006979B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE64973B17F4788500D157DE /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE64975017F4788500D157DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE64972C17F4788500D157DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE64973417F4788500D157DE;
+			remoteInfo = HopOn;
+		};
+		BED793B217F5F63F006979B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BED793AD17F5F63E006979B4 /* mach_inject_bundle.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = mach_inject_bundle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BE5983FF17F9F3BE00896A8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				BE59840017F9F3CA00896A8C /* HopOn-Injector-Info.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BED793B417F5F683006979B4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 11;
+			files = (
+				BED793B517F5F691006979B4 /* mach_inject_bundle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BE64973517F4788500D157DE /* HopOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HopOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE64973B17F4788500D157DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE64973C17F4788500D157DE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BE64973D17F4788500D157DE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BE64974017F4788500D157DE /* HopOn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HopOn-Info.plist"; sourceTree = "<group>"; };
+		BE64974217F4788500D157DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE64974417F4788500D157DE /* HopOn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopOn-Prefix.pch"; sourceTree = "<group>"; };
+		BE64974517F4788500D157DE /* HopOn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HopOn.h; sourceTree = "<group>"; };
+		BE64974617F4788500D157DE /* HopOn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopOn.m; sourceTree = "<group>"; };
+		BE64974C17F4788500D157DE /* HopOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE64974D17F4788500D157DE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BE64975517F4788500D157DE /* HopOnTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HopOnTests-Info.plist"; sourceTree = "<group>"; };
+		BE64975717F4788500D157DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE64975917F4788500D157DE /* HopOnTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HopOnTests.m; sourceTree = "<group>"; };
+		BE64976B17F47EFB00D157DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE64977B17F480A500D157DE /* com.diephouse.matt.HopOn-Injector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "com.diephouse.matt.HopOn-Injector"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE64977E17F480A500D157DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE64978117F480A500D157DE /* Injector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Injector-Prefix.pch"; sourceTree = "<group>"; };
+		BED793AD17F5F63E006979B4 /* mach_inject_bundle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mach_inject_bundle.xcodeproj; path = External/mach_inject/mach_inject_bundle/mach_inject_bundle.xcodeproj; sourceTree = "<group>"; };
+		BED793F617F5FF96006979B4 /* XPCListenerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCListenerDelegate.h; sourceTree = "<group>"; };
+		BED793F717F5FF96006979B4 /* XPCListenerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCListenerDelegate.m; sourceTree = "<group>"; };
+		BED793F917F722C4006979B4 /* Injector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Injector.h; sourceTree = "<group>"; };
+		BED793FA17F722C4006979B4 /* Injector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Injector.m; sourceTree = "<group>"; };
+		BED793FC17F7248A006979B4 /* Injector_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Injector_Internal.h; sourceTree = "<group>"; };
+		BED7940017F72EF1006979B4 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		BED7940217F72F39006979B4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BED7940717F747B7006979B4 /* Injector-launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Injector-launchd.plist"; sourceTree = "<group>"; };
+		BED7940817F74865006979B4 /* HopOn-Injector-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HopOn-Injector-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE64973117F4788500D157DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED7940417F72F51006979B4 /* Foundation.framework in Frameworks */,
+				BED7940317F72F39006979B4 /* Security.framework in Frameworks */,
+				BED7940117F72EF1006979B4 /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE64974917F4788500D157DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE64974E17F4788500D157DE /* XCTest.framework in Frameworks */,
+				BE64975217F4788500D157DE /* HopOn.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE64977817F480A500D157DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED793B617F5F6BD006979B4 /* mach_inject_bundle.framework in Frameworks */,
+				BE64977C17F480A500D157DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE64972B17F4788500D157DE = {
+			isa = PBXGroup;
+			children = (
+				BE64973E17F4788500D157DE /* Framework */,
+				BE64977D17F480A500D157DE /* Injector */,
+				BE64975317F4788500D157DE /* Tests */,
+				BE64973717F4788500D157DE /* Frameworks */,
+				BE64973617F4788500D157DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE64973617F4788500D157DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE64973517F4788500D157DE /* HopOn.framework */,
+				BE64974C17F4788500D157DE /* HopOnTests.xctest */,
+				BE64977B17F480A500D157DE /* com.diephouse.matt.HopOn-Injector */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE64973717F4788500D157DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BED793AD17F5F63E006979B4 /* mach_inject_bundle.xcodeproj */,
+				BED7940217F72F39006979B4 /* Security.framework */,
+				BED7940017F72EF1006979B4 /* ServiceManagement.framework */,
+				BE64974D17F4788500D157DE /* XCTest.framework */,
+				BE64976B17F47EFB00D157DE /* Foundation.framework */,
+				BE64973A17F4788500D157DE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE64973A17F4788500D157DE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE64973B17F4788500D157DE /* Foundation.framework */,
+				BE64973C17F4788500D157DE /* CoreData.framework */,
+				BE64973D17F4788500D157DE /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BE64973E17F4788500D157DE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				BE64974517F4788500D157DE /* HopOn.h */,
+				BE64974617F4788500D157DE /* HopOn.m */,
+				BE64974417F4788500D157DE /* HopOn-Prefix.pch */,
+				BE64974017F4788500D157DE /* HopOn-Info.plist */,
+				BE64974117F4788500D157DE /* InfoPlist.strings */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		BE64975317F4788500D157DE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BE64975917F4788500D157DE /* HopOnTests.m */,
+				BE64975517F4788500D157DE /* HopOnTests-Info.plist */,
+				BE64975617F4788500D157DE /* InfoPlist.strings */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BE64977D17F480A500D157DE /* Injector */ = {
+			isa = PBXGroup;
+			children = (
+				BE64978117F480A500D157DE /* Injector-Prefix.pch */,
+				BED7940817F74865006979B4 /* HopOn-Injector-Info.plist */,
+				BED7940717F747B7006979B4 /* Injector-launchd.plist */,
+				BED793F917F722C4006979B4 /* Injector.h */,
+				BED793FC17F7248A006979B4 /* Injector_Internal.h */,
+				BED793FA17F722C4006979B4 /* Injector.m */,
+				BED793F617F5FF96006979B4 /* XPCListenerDelegate.h */,
+				BED793F717F5FF96006979B4 /* XPCListenerDelegate.m */,
+				BE64977E17F480A500D157DE /* main.m */,
+			);
+			path = Injector;
+			sourceTree = "<group>";
+		};
+		BED793AE17F5F63E006979B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BED793B317F5F63F006979B4 /* mach_inject_bundle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BE64973217F4788500D157DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE6497FB17F4A78000D157DE /* HopOn.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BE64973417F4788500D157DE /* HopOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE64975D17F4788500D157DE /* Build configuration list for PBXNativeTarget "HopOn" */;
+			buildPhases = (
+				BE64973017F4788500D157DE /* Sources */,
+				BE64973117F4788500D157DE /* Frameworks */,
+				BE64973217F4788500D157DE /* Headers */,
+				BE64973317F4788500D157DE /* Resources */,
+				BED793B417F5F683006979B4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopOn;
+			productName = HopOn;
+			productReference = BE64973517F4788500D157DE /* HopOn.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE64974B17F4788500D157DE /* HopOnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE64976017F4788500D157DE /* Build configuration list for PBXNativeTarget "HopOnTests" */;
+			buildPhases = (
+				BE64974817F4788500D157DE /* Sources */,
+				BE64974917F4788500D157DE /* Frameworks */,
+				BE64974A17F4788500D157DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE64975117F4788500D157DE /* PBXTargetDependency */,
+			);
+			name = HopOnTests;
+			productName = HopOnTests;
+			productReference = BE64974C17F4788500D157DE /* HopOnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE64977A17F480A500D157DE /* com.diephouse.matt.HopOn-Injector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE64978417F480A500D157DE /* Build configuration list for PBXNativeTarget "com.diephouse.matt.HopOn-Injector" */;
+			buildPhases = (
+				BE5983FF17F9F3BE00896A8C /* CopyFiles */,
+				BE37540D17F9E4170053D8A6 /* ShellScript */,
+				BE64977717F480A500D157DE /* Sources */,
+				BE64977817F480A500D157DE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "com.diephouse.matt.HopOn-Injector";
+			productName = "HopOn-Injector";
+			productReference = BE64977B17F480A500D157DE /* com.diephouse.matt.HopOn-Injector */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE64972C17F4788500D157DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matt Diephouse";
+				TargetAttributes = {
+					BE64974B17F4788500D157DE = {
+						TestTargetID = BE64973417F4788500D157DE;
+					};
+				};
+			};
+			buildConfigurationList = BE64972F17F4788500D157DE /* Build configuration list for PBXProject "HopOn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE64972B17F4788500D157DE;
+			productRefGroup = BE64973617F4788500D157DE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BED793AE17F5F63E006979B4 /* Products */;
+					ProjectRef = BED793AD17F5F63E006979B4 /* mach_inject_bundle.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BE64973417F4788500D157DE /* HopOn */,
+				BE64977A17F480A500D157DE /* com.diephouse.matt.HopOn-Injector */,
+				BE64974B17F4788500D157DE /* HopOnTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BED793B317F5F63F006979B4 /* mach_inject_bundle.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = mach_inject_bundle.framework;
+			remoteRef = BED793B217F5F63F006979B4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE64973317F4788500D157DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE64974317F4788500D157DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE64974A17F4788500D157DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE64975817F4788500D157DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE37540D17F9E4170053D8A6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/python;
+			shellScript = "#!/usr/bin/python\n\nimport os\nimport sys\nimport subprocess\n\nPRODUCTS_DIR = os.environ['BUILT_PRODUCTS_DIR']\nPROJECT_DIR  = os.environ['PROJECT_DIR']\nPLIST_BUDDY  = '/usr/libexec/PlistBuddy'\n\ndef read_identifier_from_file():\n    directory = PROJECT_DIR\n    while directory != '/':\n        file = os.path.join(directory, 'HOPON_HOST_IDENTIFIER')\n        if os.path.exists(file):\n            return open(file).read().rstrip()\n        directory = os.path.dirname(directory)\n    raise Exception(\"Could not read identifier from HOPON_HOST_IDENTIFIER file\")\n\ndef write_identifer_to_plist(identifier):\n    plist   = os.path.join(PRODUCTS_DIR, 'HopOn-Injector-Info.plist')\n    command = \"Delete SMAuthorizedClients\"\n    subprocess.call([PLIST_BUDDY, '-c', command, plist])\n\n    command = \"Add SMAuthorizedClients array\"\n    subprocess.call([PLIST_BUDDY, '-c', command, plist])\n\n    command = \"Add SMAuthorizedClients:0 string 'identifier \\\\\\\"%s\\\\\\\"'\" % identifier\n    subprocess.call([PLIST_BUDDY, '-c', command, plist])\n\nidentifier = read_identifier_from_file()\nwrite_identifer_to_plist(identifier)";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE64973017F4788500D157DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE64974717F4788500D157DE /* HopOn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE64974817F4788500D157DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE64975A17F4788500D157DE /* HopOnTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE64977717F480A500D157DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED793F817F5FF96006979B4 /* XPCListenerDelegate.m in Sources */,
+				BED793FB17F722C4006979B4 /* Injector.m in Sources */,
+				BE64977F17F480A500D157DE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE64975117F4788500D157DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE64973417F4788500D157DE /* HopOn */;
+			targetProxy = BE64975017F4788500D157DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE64974117F4788500D157DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE64974217F4788500D157DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE64975617F4788500D157DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE64975717F4788500D157DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE64975B17F4788500D157DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE64975C17F4788500D157DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE64975E17F4788500D157DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Framework/HopOn-Prefix.pch";
+				INFOPLIST_FILE = "Framework/HopOn-Info.plist";
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		BE64975F17F4788500D157DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Framework/HopOn-Prefix.pch";
+				INFOPLIST_FILE = "Framework/HopOn-Info.plist";
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		BE64976117F4788500D157DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HopOn.framework/Versions/A/HopOn";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopOn/HopOn-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HopOnTests/HopOnTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BE64976217F4788500D157DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HopOn.framework/Versions/A/HopOn";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HopOn/HopOn-Prefix.pch";
+				INFOPLIST_FILE = "HopOnTests/HopOnTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		BE64978517F480A500D157DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Injector/Injector-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"$(BUILT_PRODUCTS_DIR)/HopOn-Injector-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"Injector/Injector-launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE64978617F480A500D157DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Injector/Injector-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"$(BUILT_PRODUCTS_DIR)/HopOn-Injector-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"Injector/Injector-launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE64972F17F4788500D157DE /* Build configuration list for PBXProject "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE64975B17F4788500D157DE /* Debug */,
+				BE64975C17F4788500D157DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE64975D17F4788500D157DE /* Build configuration list for PBXNativeTarget "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE64975E17F4788500D157DE /* Debug */,
+				BE64975F17F4788500D157DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE64976017F4788500D157DE /* Build configuration list for PBXNativeTarget "HopOnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE64976117F4788500D157DE /* Debug */,
+				BE64976217F4788500D157DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE64978417F480A500D157DE /* Build configuration list for PBXNativeTarget "com.diephouse.matt.HopOn-Injector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE64978517F480A500D157DE /* Debug */,
+				BE64978617F480A500D157DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE64972C17F4788500D157DE /* Project object */;
+}

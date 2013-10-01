@@ -10,7 +10,7 @@ Here's a rough outline of the steps to use HopOn:
 
 0. Add HopOn as a submodule
 
-0. Get HopOn's submodules: `git submodule update --init --recursive`.
+0. Bootstrap HopOn: `script/bootstrap`.
 
 0. Add HopOn.xcodeproj to your project or workspace.
 

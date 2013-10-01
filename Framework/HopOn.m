@@ -49,8 +49,6 @@
 		CFStringRef errorDomain = CFErrorGetDomain(blessError);
 		
 		NSLog(@"an error occurred while installing %@ (domain: %@ (%@))", bundleLabel, errorDomain, [NSNumber numberWithLong:errorCode]);
-	} else {
-		NSLog(@"Installed %@ successfully", bundleLabel);
 	}
 	
 	NSXPCConnection *connection = [[NSXPCConnection alloc] initWithMachServiceName:HopOnInjectorServiceName options:NSXPCConnectionPrivileged];
